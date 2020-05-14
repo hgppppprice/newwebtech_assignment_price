@@ -1,0 +1,46 @@
+<%- include ('partials/header.ejs'); -%>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="Game Title" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Platform" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Saler Username" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Price(CAD)" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="position" name="position" class="form-control" required>
+                        <option selected disabled>Choose genre</option>
+                        <option>Action games</option>
+                        <option>First-person-shooter games</option>
+                        <option>Action-adventure games</option>
+                        <option>Adventure games</option>
+                        <option>Role-playing games</option>
+                        <option>Simulation games</option>
+                        <option>Strategy games</option>
+                        <option>Sports games</option>
+                        <option>Visual Novel games</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>Game Image</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Add Game</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
